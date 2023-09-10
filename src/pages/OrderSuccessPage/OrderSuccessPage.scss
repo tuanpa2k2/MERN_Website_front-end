@@ -1,0 +1,220 @@
+.wrapper-conatinerOrderSuccessPage {
+  width: 100%;
+  min-height: 682px;
+  height: fit-content;
+  padding: 0 120px;
+  box-shadow: 0 0 10px blue;
+
+  .header-text {
+    background-color: #eaeaea;
+    font-weight: 500;
+    font-size: 1.8rem;
+    padding: 10px 10px;
+    margin-bottom: 5px;
+    color: blue;
+    display: flex;
+
+    svg {
+      font-size: 30px;
+      margin-right: 10px;
+      color: green;
+    }
+  }
+
+  .content-OrderSuccess {
+    background-color: #eaeaea;
+    padding: 5px 8px;
+    font-size: 1.6rem;
+
+    .shipping {
+      background-color: #ffffff;
+      margin-bottom: 10px;
+      padding: 8px 5px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+
+      .text-title {
+        font-weight: 500;
+
+        .title-k {
+          margin: 5px 0;
+          background-color: #d9d9d9;
+          padding: 5px 25px 5px 5px;
+        }
+      }
+
+      .details {
+        flex: 1;
+
+        .detail-1 {
+          margin: 5px 10px;
+          background-color: rgb(200, 248, 255);
+          padding: 5px 25px 5px 5px;
+          display: flex;
+
+          p {
+            color: #ea8500;
+            margin-right: 5px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .space-hr {
+      border: 1px solid blue;
+    }
+
+    .card-product {
+      .text-title-product {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 1.7rem;
+        font-weight: 500;
+        padding: 8px 10px;
+        color: blue;
+
+        .all-details {
+          display: flex;
+          align-items: center;
+          color: black;
+
+          p {
+            font-style: oblique;
+            color: blue;
+            margin-left: 5px;
+          }
+
+          span {
+            font-size: 1.9rem;
+            color: red;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .header-table {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0;
+        width: 100%;
+        font-size: 1.65rem;
+        font-weight: 500;
+        text-align: center;
+        background-color: #d9d9d9;
+        border-bottom: 1px solid black;
+
+        .image-product {
+          border-right: 1px solid black;
+          width: 12%;
+        }
+
+        .name-product {
+          border-right: 1px solid black;
+          width: 40%;
+        }
+
+        .quantity-product {
+          width: 7%;
+        }
+
+        .price-product {
+          border-right: 1px solid black;
+          border-left: 1px solid black;
+          width: 13%;
+        }
+
+        .discountPrice-product {
+          border-right: 1px solid black;
+          width: 13%;
+        }
+
+        .total-product {
+          width: 15%;
+        }
+      }
+
+      .content-table {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: fit-content;
+        font-size: 1.6rem;
+        text-align: center;
+        background-color: #ffffff;
+        border-bottom: 1px solid blue;
+
+        .image {
+          width: 12%;
+          height: 90px;
+          padding: 8px 0px;
+          border-left: 1px solid black;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: all ease 0.3s;
+            border-right: 1px solid black;
+
+            &:hover {
+              cursor: pointer;
+              transform: scale(0.9);
+            }
+          }
+        }
+
+        .name-prod {
+          width: 40%;
+          text-align: start;
+
+          padding: 0 5px;
+
+          .name {
+            word-wrap: break-word;
+            overflow: hidden;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+
+          .discount-prod {
+            font-style: oblique;
+            color: blue;
+          }
+        }
+
+        .quantity {
+          border-right: 1px solid black;
+          border-left: 1px solid black;
+          width: 7%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .price {
+          border-right: 1px solid black;
+          width: 13%;
+          font-size: 1.8rem;
+        }
+
+        .discount {
+          border-right: 1px solid black;
+          width: 13%;
+          font-size: 1.8rem;
+        }
+
+        .total {
+          font-size: 1.8rem;
+          width: 15%;
+          color: blue;
+        }
+      }
+    }
+  }
+}

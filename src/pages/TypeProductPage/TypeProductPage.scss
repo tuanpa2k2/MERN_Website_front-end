@@ -1,0 +1,50 @@
+.wrapper-containerTypeProPage {
+  padding: 0 120px;
+  min-height: fit-content;
+  display: flex;
+
+  .column-left {
+    width: 20%;
+    border-left: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  .column-right {
+    position: relative; // có định các thẻ position nằm bên trong
+    background-color: var(--background-header-inner);
+    width: 80%;
+    padding-top: 5px;
+    border: 1px solid var(--text-color);
+
+    .card-Comp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 17px;
+
+      .loading-product {
+        font-size: 2.2rem;
+        color: blue;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -75%);
+      }
+    }
+
+    .pagination {
+      // đưa thẻ div 'pagination' xuống cuối cùng của thẻ div cha (phải phụ thuộc vào 'position: relative' ở thẻ cha)
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      // css bình thường
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #c3c3c3;
+    }
+  }
+}

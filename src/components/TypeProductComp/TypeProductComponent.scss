@@ -1,0 +1,13 @@
+.wrapper-typeProduct {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  text-transform: capitalize;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--background-hover);
+    border-radius: 5px;
+  }
+}

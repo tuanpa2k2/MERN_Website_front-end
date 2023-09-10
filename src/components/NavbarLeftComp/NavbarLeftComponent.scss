@@ -1,0 +1,64 @@
+.wrapper-navbarLeftComp {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+
+  .text-label {
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 600;
+    background-color: var(--background-header-inner);
+    padding: 5px 0;
+  }
+
+  .text-categories,
+  .checkbox-place,
+  .text-price {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--text-color);
+  }
+
+  // ----------------------------------- CSS nằm trong function renderContent()
+  // case 'text':
+  .text-value {
+    padding: 4px 0 4px 15px;
+    color: var(--text-color);
+    text-transform: capitalize;
+
+    &:hover {
+      background-color: var(--background-hover);
+      cursor: pointer;
+    }
+  }
+
+  // case 'checkbox':
+  .form-group-checkbox {
+    padding: 4px 0 4px 15px;
+
+    .text-value-checkbox {
+      padding: 4px 0 4px 10px;
+      color: var(--text-color);
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      background-color: var(--background-hover);
+      cursor: pointer;
+    }
+  }
+
+  // case 'price':
+  .form-group-price {
+    padding: 5px 0 5px 15px;
+    border-radius: 15px;
+    background-color: #ffffff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d5d5d5;
+    }
+  }
+}

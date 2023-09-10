@@ -1,0 +1,16 @@
+.btn-createUser {
+  width: 100%;
+  color: blue;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.7rem;
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 5px 0;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px blue;
+    text-shadow: 0 0 10px blue;
+  }
+}

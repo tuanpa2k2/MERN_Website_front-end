@@ -1,0 +1,44 @@
+.wrapper-sliderComp {
+  & .slick-arrow.slick-prev,
+  & .slick-arrow.slick-next {
+    top: 50%;
+    z-index: 10;
+
+    &::before {
+      font-size: 30px;
+      color: var(--white);
+    }
+  }
+
+  & .slick-arrow.slick-prev {
+    left: 12px;
+  }
+
+  & .slick-arrow.slick-next {
+    right: 28px;
+  }
+
+  & .slick-dots {
+    z-index: 10;
+
+    li {
+      button {
+        &::before {
+          color: var(--red);
+        }
+      }
+    }
+
+    li.active {
+      button {
+        &::before {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .image-slider {
+    object-fit: cover;
+  }
+}

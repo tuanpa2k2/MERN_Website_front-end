@@ -1,0 +1,87 @@
+.wrapper-table {
+  border: 1px solid black;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  .name-product {
+    width: 345px;
+    text-align: start;
+
+    p {
+      word-wrap: break-word;
+      white-space: normal;
+      overflow: hidden;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .data-image {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.actions-table {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  .btn-deleteAll {
+    border: 1px solid red;
+    color: red;
+    border-radius: 8px;
+    padding: 3px 0;
+    margin-bottom: 4px;
+    width: 15%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: transparent;
+
+    svg {
+      margin: 0 8px -2px 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px red;
+    }
+  }
+
+  .btn-exportExcel {
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 8px;
+    padding: 3px 0;
+    margin-bottom: 4px;
+    width: 15%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: transparent;
+
+    svg {
+      margin: 0 8px -2px 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px blue;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.wrapper-footerComp {
+  width: 100%;
+  height: fit-content;
+
+  .footer-content {
+    padding: 25px 0px;
+    max-width: 1288px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    gap: 20px;
+
+    .col {
+      max-width: 300px;
+      padding: 0 10px;
+
+      .title {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .text {
+        color: var(--text-color);
+      }
+
+      .c-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        svg {
+          flex-shrink: 0;
+          font-size: 18px;
+          margin-right: 10px;
+          color: var(--text-color);
+        }
+      }
+
+      span {
+        &.text {
+          text-transform: capitalize;
+          display: block;
+          margin-bottom: 10px;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-bar {
+    position: relative;
+    background-color: #3586ff;
+    margin-top: 45px;
+
+    .waves-image {
+      .wave {
+        position: absolute;
+        top: -60px;
+        height: 60px;
+        width: 100%;
+        background: url("../../assets/images/product/wave.png");
+        background-size: 1000px 87px;
+      }
+
+      .wave#wave1 {
+        z-index: 100;
+        opacity: 1;
+        bottom: 0;
+        animation: animationWave1 5s linear infinite;
+      }
+
+      .wave#wave2 {
+        z-index: 99;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animationWave2 5s linear infinite;
+      }
+
+      .wave#wave3 {
+        z-index: 100;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animationWave1 4s linear infinite;
+      }
+
+      .wave#wave4 {
+        z-index: 99;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animationWave2 4s linear infinite;
+      }
+    }
+
+    .bottom-bar-content {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+
+      .text {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: var(--white);
+      }
+
+      .group-icon {
+        .text-icon {
+          margin-bottom: 15px;
+          color: var(--white);
+        }
+        svg {
+          font-size: 25px;
+          color: var(--white);
+          margin: 0 10px;
+          display: inline-block; // phụ trợ cho css hiệu ứng hover icons
+          transition: 0.5s;
+
+          &:hover {
+            cursor: pointer;
+            color: red;
+            transform: translateY(-10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animationWave1 {
+  0% {
+    background-position-x: 950px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animationWave2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 950px;
+  }
+}

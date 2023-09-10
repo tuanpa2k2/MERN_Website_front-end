@@ -1,0 +1,266 @@
+.wrapper-header {
+  width: 100%;
+  height: 64px;
+  background-color: var(--background-header-inner);
+  border-bottom: 1px solid black;
+
+  .inner {
+    margin: 0 120px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      .logo {
+        padding: 15px 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: var(--blue);
+
+        &:hover {
+          cursor: pointer;
+          color: var(--red);
+        }
+      }
+    }
+    .center {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 520px;
+      height: 44px;
+      padding-left: 16px;
+      border: 1.5px solid transparent;
+      border-radius: 92px;
+      background-color: rgba(22, 24, 35, 0.06);
+
+      input {
+        flex: 1;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        height: 100%;
+        background-color: transparent;
+        padding-right: 10px;
+      }
+
+      .btn-search {
+        width: 52px;
+        height: 100%;
+        border-top-right-radius: 92px;
+        border-bottom-right-radius: 92px;
+        background-color: transparent;
+
+        svg {
+          display: flex;
+          margin-left: 12px;
+          font-size: 22px;
+        }
+
+        &:hover {
+          background-color: var(--background-hover);
+          cursor: pointer;
+        }
+
+        // css khi click vào sẽ có màu
+        &:active {
+          background-color: var(--background-click);
+        }
+      }
+
+      // css phần gạch dọc bên cạnh ô tìm kiếm
+      &::after {
+        content: "";
+        position: absolute;
+        right: 52px;
+        width: 1px;
+        height: 26px;
+        background-color: rgb(159, 159, 159);
+      }
+
+      // css border khi focus vào thẻ input
+      &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      //--------- CSS Tippy ------------
+      .tippy-popper {
+        display: grid;
+        text-align: center;
+        width: fit-content;
+        background-color: #e9e6e6;
+        border: 1px solid #a0a0a0;
+        border-radius: 5px;
+
+        p {
+          padding: 3px 25px;
+          color: var(--text-color);
+          pointer-events: none;
+        }
+
+        span {
+          font-size: 1.5rem;
+          padding: 3px 25px;
+          color: var(--text-color);
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--background-hover);
+            cursor: pointer;
+          }
+
+          &:first-child {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+          &:last-child {
+            font-weight: 600;
+            border-top: 1px solid black;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+
+        // mũi tên arrow
+        &::after {
+          content: "";
+          border-left: 10px solid transparent;
+          border-bottom: 8px solid rgb(182, 182, 182);
+          border-right: 10px solid transparent;
+          position: absolute;
+          bottom: 100%;
+          right: 50%;
+          top: -3px;
+          transform: translate(50%, -50%);
+        }
+      }
+
+      .popper-intro,
+      .name-account {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 18px;
+        border-radius: 5px;
+
+        svg {
+          font-size: 20px;
+          margin-right: 8px;
+        }
+
+        img {
+          margin-right: 8px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .popper-intro {
+        &:hover {
+          cursor: pointer;
+          background-color: var(--background-hover);
+        }
+      }
+
+      .name-account {
+        color: var(--blue);
+
+        &:hover {
+          color: red;
+          background-color: var(--background-hover);
+          cursor: pointer;
+        }
+      }
+
+      .cart-icon {
+        position: relative;
+        display: flex;
+        font-size: 18px;
+        padding: 5px 0;
+        cursor: pointer;
+
+        svg {
+          font-size: 23px;
+
+          &:hover {
+            cursor: pointer;
+            color: var(--primary);
+          }
+        }
+
+        span {
+          position: absolute;
+          text-align: center;
+          background-color: var(--primary);
+          color: var(--white);
+          font-size: 13px;
+          padding: 2px;
+          top: -8px;
+          right: -6px;
+          line-height: 1;
+          border-radius: 6px;
+        }
+      }
+
+      .btn-more {
+        position: relative;
+        display: flex;
+        padding: 5px 0;
+
+        svg {
+          font-size: 23px;
+          margin-right: -7px;
+
+          &:hover {
+            cursor: pointer;
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+
+  &.sticky-header {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    animation: stickyHeader 1s ease forwards;
+  }
+}
+
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animationfire1 {
+  0% {
+    background-position-x: 950px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animationfire2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 950px;
+  }
+}
