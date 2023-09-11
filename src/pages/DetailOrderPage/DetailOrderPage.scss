@@ -43,6 +43,7 @@
 
     .info-details {
       display: flex;
+      width: 100%;
 
       .diachi,
       .giaohang,
@@ -76,7 +77,7 @@
       }
 
       .diachi {
-        width: 650px;
+        width: 46%;
 
         .name {
           text-transform: uppercase;
@@ -97,7 +98,7 @@
       }
 
       .giaohang {
-        width: 288px;
+        width: 24%;
 
         .text-false {
           background-color: yellow;
@@ -219,12 +220,13 @@
       .sanphamsoit {
         display: flex;
         height: 188px;
+        width: 72%;
+        gap: 8px;
+        padding: 8px;
 
         .image {
-          width: 180px;
+          width: 22%;
           height: 100%;
-          color: red;
-          padding: 8px;
 
           img {
             width: 100%;
@@ -240,8 +242,8 @@
         }
 
         .info-product {
-          width: 720px;
-          padding: 8px 0;
+          flex: 1;
+          box-shadow: 0 0 2px black;
 
           .name {
             word-wrap: break-word;
@@ -276,12 +278,13 @@
       .sanphamsonhieu {
         display: flex;
         height: 188px;
+        width: 72%;
+        gap: 8px;
+        padding: 8px;
 
         .image {
-          width: 180px;
+          width: 22%;
           height: 100%;
-          color: red;
-          padding: 8px;
 
           img {
             width: 100%;
@@ -297,8 +300,8 @@
         }
 
         .info-product {
-          width: 720px;
-          padding: 8px 0;
+          flex: 1;
+          box-shadow: 0 0 2px black;
 
           .name {
             word-wrap: break-word;
@@ -334,7 +337,7 @@
         position: absolute;
         right: 0;
         height: calc(100% - 16px);
-        width: 28%;
+        width: calc(100% - 73%);
         margin: 8px;
         border: 1px solid blue;
 

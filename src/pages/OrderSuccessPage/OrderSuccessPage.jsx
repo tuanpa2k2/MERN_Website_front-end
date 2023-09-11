@@ -13,7 +13,7 @@ const OrderSuccessPage = () => {
   return (
     <div className="wrapper-conatinerOrderSuccessPage">
       <div className="header-text">
-        <BsCardChecklist /> Đơn đặt hàng thành công
+        <BsCardChecklist /> Các sản phẩm bạn vừa mới đặt hàng thành công 🥰
       </div>
       <div className="content-OrderSuccess">
         <div className="shipping">
@@ -31,7 +31,6 @@ const OrderSuccessPage = () => {
         <div className="space-hr"></div>
         <div className="card-product">
           <div className="text-title-product">
-            <div className="abcd">Các sản phẩm vừa mới đặt hàng</div>
             <div className="all-details">
               Tổng tiền tất cả sản phẩm <p>( phí giao hàng: {convertPrice(state.totalDilivery)} )</p>:
               <span>{convertPrice(state?.totalPriceMemo)}</span>

@@ -51,13 +51,12 @@
           background-color: rgb(42, 42, 255);
           font-size: 1.75rem;
           font-weight: 500;
-          padding: 2px 10px;
+          padding: 5px 10px;
           color: rgb(255, 255, 255);
         }
 
-        :where(.css-dev-only-do-not-override-txh9fw).ant-steps {
-          padding: 5px 12px;
-          font-weight: 500;
+        :where(.css-18iikkb).ant-steps {
+          padding: 8px;
         }
       }
 
@@ -260,8 +259,7 @@
                 border: 1px solid black;
                 border-radius: 6px;
                 position: relative;
-                width: 92px;
-                height: 29px;
+                width: calc(100% - 25px);
 
                 button {
                   padding: 0 8px;
@@ -368,12 +366,14 @@
 
     .right {
       position: relative;
-      width: 25%;
+      flex: 1;
       border-right: 1px solid black;
       border-bottom: 1px solid black;
+      border-top: 1px solid black;
 
       .title-order {
         padding: 5px 0;
+        margin-top: 5px;
         font-size: 1.7rem;
         text-align: center;
         text-transform: uppercase;

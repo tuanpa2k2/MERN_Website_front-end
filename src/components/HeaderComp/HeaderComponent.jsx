@@ -9,6 +9,7 @@ import { VscAccount } from "react-icons/vsc";
 import * as UserService from "../../services/UserService";
 import { resetUser } from "../../redux/slides/userSlide";
 import { searchProduct } from "../../redux/slides/productSlide";
+import logo from "../../assets/images/bgr-image/logo.png";
 
 import "./HeaderComponent.scss";
 
@@ -72,7 +73,10 @@ const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false }) => {
       <header className={`wrapper-header ${scrolled ? "sticky-header" : ""}`}>
         <div className="inner">
           <div className="left" onClick={() => navigate("/")}>
-            <div className="logo">anhtuan shop</div>
+            <div className="logo">
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="text-logo">anhtuan shop</div>
           </div>
           {!isHidenSearch && (
             <div className="center">
