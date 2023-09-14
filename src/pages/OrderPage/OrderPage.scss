@@ -181,6 +181,11 @@
           position: relative;
           overflow: scroll;
           height: 552px;
+          background: transparent;
+          background-image: url("../../assets/images/bgr-image/logo.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          opacity: 0.8;
 
           &::-webkit-scrollbar {
             display: none;
