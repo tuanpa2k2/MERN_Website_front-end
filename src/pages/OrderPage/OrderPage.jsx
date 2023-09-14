@@ -1,6 +1,7 @@
 /* eslint-disable no-mixed-operators */
 import React, { useEffect, useMemo, useState } from "react";
-import { FcShipped } from "react-icons/fc";
+import { LiaShippingFastSolid } from "react-icons/lia";
+import { FaLuggageCart } from "react-icons/fa";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BsCartX } from "react-icons/bs";
 
@@ -244,7 +245,7 @@ const OrderPage = () => {
   return (
     <div className="wrapper-containerOrderPage">
       <div className="header-title">
-        <FcShipped />
+        <FaLuggageCart />
         <span>
           Giỏ hàng của bạn<p>- vui lòng kiểm tra kĩ thông tin trước khi mua nhé... 🥰🥰🥰</p>
         </span>
@@ -252,7 +253,10 @@ const OrderPage = () => {
       <div className="detail-behind">
         <div className="left">
           <div className="steps">
-            <p>Cước phí vận chuyển đơn hàng...</p>
+            <p>
+              <LiaShippingFastSolid />
+              Cước phí vận chuyển đơn hàng...
+            </p>
             <StepComponent
               items={itemsDelevery}
               current={
@@ -430,6 +434,7 @@ const OrderPage = () => {
         onCancel={handleCancel}
         // okButtonProps={{ style: { display: "none" } }} // Ẩn button OK trong ant design
         onOk={handleUpdateInfoUser}
+        width={600}
       >
         <LoadingComponent isLoading={isLoadingUpdated}>
           <Form name="basic" labelCol={{ span: 6 }} wrapperCol={{ span: 18 }} autoComplete="on" form={form}>
@@ -460,12 +465,6 @@ const OrderPage = () => {
             >
               <Input name="address" value={stateUserDetail.address} onChange={handleOnchangeDetails} />
             </Form.Item>
-
-            {/* <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-              <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
-                Cập nhập
-              </Button>
-            </Form.Item> */}
           </Form>
         </LoadingComponent>
       </ModalComponent>

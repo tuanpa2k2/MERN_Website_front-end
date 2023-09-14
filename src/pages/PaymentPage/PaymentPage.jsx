@@ -201,6 +201,10 @@ const PaymentPage = () => {
                   <Radio value="fast">
                     <span className="abcd">FAST</span> Giao hàng tiết kiệm
                   </Radio>
+                </Radio.Group>
+              </div>
+              <div className="select-radio">
+                <Radio.Group onChange={handleDilivery} value={delivery}>
                   <Radio value="goject">
                     <span className="abcd">GO_JECT</span> Giao hàng nhanh
                   </Radio>
@@ -212,6 +216,10 @@ const PaymentPage = () => {
               <div className="select-radio">
                 <Radio.Group onChange={handlePayment} value={payment}>
                   <Radio value="later_money">Thanh toán khi nhận hàng</Radio>
+                </Radio.Group>
+              </div>
+              <div className="select-radio">
+                <Radio.Group onChange={handlePayment} value={payment}>
                   <Radio value="paypal">Thanh toán bằng Paypal</Radio>
                 </Radio.Group>
               </div>

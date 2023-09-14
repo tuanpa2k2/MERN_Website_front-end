@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { AiOutlineShoppingCart, AiTwotoneMedicineBox } from "react-icons/ai";
+import { FaPersonRunning } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import * as ProductService from "../../services/ProductService";
@@ -171,7 +172,12 @@ const ProductDetailComponent = ({ idProduct }) => {
               <span className="add-to-cart">Thêm vào giỏ hàng</span>
               <span className="added">Đã thêm vào giỏ hàng</span>
               <i className="fa-shopping-cart">
-                <AiOutlineShoppingCart />
+                <p className="person-icon">
+                  <FaPersonRunning />
+                </p>
+                <p className="cart-icon">
+                  <AiOutlineShoppingCart />
+                </p>
               </i>
               <i className="fa-box">
                 <AiTwotoneMedicineBox />

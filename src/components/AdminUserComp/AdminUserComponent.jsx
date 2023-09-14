@@ -385,6 +385,7 @@ const AdminUserComponent = () => {
         onCancel={handleCancel}
         okButtonProps={{ style: { display: "none" } }} // Ẩn button OK trong ant design
         centered
+        width={800}
       >
         <LoadingComponent isLoading={isLoadingCreate}>
           <Form>
@@ -479,6 +480,7 @@ const AdminUserComponent = () => {
         open={isModalOpenDelete}
         onOk={onDeleteUser}
         onCancel={handleCancelDelete}
+        width={400}
       >
         <LoadingComponent isLoading={isLoadingDeleted}>
           <div style={{ display: "grid", justifyItems: "center", paddingBottom: "20px" }}>

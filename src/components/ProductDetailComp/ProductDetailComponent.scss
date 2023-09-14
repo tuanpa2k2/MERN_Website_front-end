@@ -244,17 +244,26 @@
           top: 60%;
           left: -10%;
           transform: translate(-50%, -50%);
-          font-size: 3.6rem;
+          display: flex;
+
+          .person-icon {
+            font-size: 3.4rem;
+            margin-top: 1px;
+          }
+          .cart-icon {
+            font-size: 3.1rem;
+            margin-top: 8px;
+            margin-left: -8px;
+          }
         }
 
         .fa-box {
           position: absolute;
           z-index: 3;
           top: -20%;
-          left: 50.3%;
+          left: 52.2%;
           transform: translate(-50%, -50%);
           font-size: 1.9rem;
-          color: red;
         }
       }
 
@@ -309,11 +318,11 @@
   }
   60% {
     top: 40%;
-    left: 50.3%;
+    left: 52.2%;
   }
   100% {
     top: 40%;
-    left: 110%;
+    left: 112%;
   }
 }
 @keyframes txtt1 {

@@ -32,11 +32,13 @@ const FooterComponent = () => {
   return (
     <div className="wrapper-footerComp">
       <div className="footer-content">
-        <div className="title">Giới thiệu</div>
-        <div className="text">
-          Dự án cá nhân đầu tiên tự học, có những chỗ chưa hoàn thành logic nên mong mọi người bỏ qua cho mình nhé
-          <br />
-          <p style={{ color: "blue", fontSize: "2.2rem" }}>THANKS ALL</p>
+        <div className="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+          <div className="title">Giới thiệu</div>
+          <div className="text">
+            Dự án cá nhân đầu tiên tự học, có những chỗ chưa hoàn thành logic nên mong mọi người bỏ qua cho mình nhé
+            <br />
+            <p style={{ color: "blue", fontSize: "2rem" }}>THANKS ALL</p>
+          </div>
         </div>
         <div className="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
           <div className="title">Liên hệ</div>

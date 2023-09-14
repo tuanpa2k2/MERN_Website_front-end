@@ -27,7 +27,7 @@ const SignInPage = () => {
   const { data, isLoading, isSuccess } = mutation; // lấy data từ mutation
 
   useEffect(() => {
-    if (isSuccess) {
+    if (isSuccess && data.status === "OK") {
       if (location?.state) {
         // cái state này là state `pathname`, nó nằm ở 'btn-thêm vào giỏ hàng trong ProductDetailComp'
         message.success("Đăng nhập thành công.");
