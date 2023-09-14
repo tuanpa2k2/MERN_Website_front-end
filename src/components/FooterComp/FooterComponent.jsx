@@ -1,12 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import { FaLocationArrow } from "react-icons/fa";
 import { BsTelephoneForward, BsEnvelopeCheck } from "react-icons/bs";
 import { BsFacebook, BsInstagram, BsTwitter, BsTiktok } from "react-icons/bs";
+import * as ProductService from "../../services/ProductService";
+import TypeProductComponent from "../TypeProductComp/TypeProductComponent";
 
 import "./FooterComponent.scss";
 
 const FooterComponent = () => {
+  const [typeProduct, setTypeProduct] = useState([]);
+
+  const fetchAllTypeProduct = async () => {
+    const res = await ProductService.getAllTypeProduct();
+
+    if (res.status === "OK") {
+      setTypeProduct(res.data);
+    }
+    return res;
+  };
+
+  // Gọi luôn type product
+  useEffect(() => {
+    fetchAllTypeProduct();
+  }, []);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -14,27 +32,14 @@ const FooterComponent = () => {
   return (
     <div className="wrapper-footerComp">
       <div className="footer-content">
-        <div
-          className="col"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1000"
-        >
-          <div className="title">About</div>
-          <div className="text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-            beatae nesciunt maiores molestiae dolore. Fuga, minus saepe facere
-            perspiciatis voluptate soluta aspernatur dolorum sed amet temporibus
-            in iusto eligendi expedita.
-          </div>
+        <div className="title">Giới thiệu</div>
+        <div className="text">
+          Dự án cá nhân đầu tiên tự học, có những chỗ chưa hoàn thành logic nên mong mọi người bỏ qua cho mình nhé
+          <br />
+          <p style={{ color: "blue", fontSize: "2.2rem" }}>THANKS ALL</p>
         </div>
-        <div
-          className="col"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1000"
-        >
-          <div className="title">Contact</div>
+        <div className="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+          <div className="title">Liên hệ</div>
           <div className="c-item">
             <FaLocationArrow />
             <div className="text">Thái Thụy - Thái Bình</div>
@@ -48,27 +53,18 @@ const FooterComponent = () => {
             <div className="text">Email: tuanpa2k2@gmail.com</div>
           </div>
         </div>
-        <div
-          className="col"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1000"
-        >
-          <div className="title">Categories</div>
-          <span className="text">Books English</span>
-          <span className="text">Máy tính</span>
-          <span className="text">Đồ dùng học tập</span>
-          <span className="text">Điện thoại</span>
-          <span className="text">Giày dép</span>
-          <span className="text">Quần áo</span>
+        <div className="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+          <div className="title">Thể loại</div>
+          {typeProduct.map((type) => {
+            return (
+              <span key={type} className="text">
+                <TypeProductComponent key={type} name={type} />
+              </span>
+            );
+          })}
         </div>
-        <div
-          className="col"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1000"
-        >
-          <div className="title">Page</div>
+        <div className="col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+          <div className="title">Trang</div>
           <span className="text">home</span>
           <span className="text">about</span>
           <span className="text">Contact us</span>
@@ -84,9 +80,7 @@ const FooterComponent = () => {
           <div className="wave" id="wave4"></div>
         </div>
         <div className="bottom-bar-content">
-          <div className="text">
-            created by TuanPA - Latest Design Template.
-          </div>
+          <div className="text">created by TuanPA - Latest Design Template.</div>
           <div className="group-icon">
             <div className="text-icon">Following - Will be any more</div>
             <BsFacebook />

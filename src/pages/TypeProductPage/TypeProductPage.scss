@@ -4,18 +4,25 @@
   height: fit-content;
   display: flex;
 
-  .column-left {
-    width: 20%;
-    border-left: 1px solid var(--text-color);
-    border-bottom: 1px solid var(--text-color);
+  .row-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 35px;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    margin-bottom: 5px;
   }
 
-  .column-right {
+  .row-content {
     position: relative; // có định các thẻ position nằm bên trong
     background-color: var(--background-header-inner);
-    width: 80%;
+    width: 100%;
     padding-top: 5px;
     border: 1px solid var(--text-color);
+    padding: 8px 0;
+    min-height: 645px;
+    height: fit-content;
 
     .card-Comp {
       display: flex;

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NavbarLeftComponent from "../../components/NavbarLeftComp/NavbarLeftComponent";
 import CardComponent from "../../components/CardComp/CardComponent";
 import { Pagination } from "antd";
 import * as ProductService from "../../services/ProductService";
@@ -9,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import LoadingComponent from "../../components/LoadingComp/LoadingComponent";
 import { useSelector } from "react-redux";
 import { useDebounceHook } from "../../hooks/useDebounceHook";
+import TypeProductComponent from "../../components/TypeProductComp/TypeProductComponent";
 
 const TypeProductPage = () => {
   const { state } = useLocation(); // lấy state từ Location
@@ -16,6 +16,7 @@ const TypeProductPage = () => {
   const searchDebounce = useDebounceHook(searchProduct, 500);
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [typeProduct, setTypeProduct] = useState([]);
 
   const fetchProductType = async (type) => {
     const res = await ProductService.getProductType(type);
@@ -27,21 +28,32 @@ const TypeProductPage = () => {
     }
   };
 
+  const fetchProductAllType = async () => {
+    const res = await ProductService.getAllTypeProduct();
+    if (res?.status === "OK") {
+      setTypeProduct(res?.data);
+    }
+    return res;
+  };
+
   useEffect(() => {
+    fetchProductAllType();
     if (state) {
       fetchProductType(state);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [state]);
 
   return (
     <LoadingComponent isLoading={isLoading}>
       <div className="wrapper-containerTypeProPage">
-        <div className="column-left">
-          <NavbarLeftComponent />
+        <div className="row-type">
+          {typeProduct.map((item) => {
+            return <TypeProductComponent key={item} name={item} />;
+          })}
         </div>
 
-        <div className="column-right">
+        <div className="row-content">
           <div className="card-Comp">
             {products.length > 0 ? (
               products
