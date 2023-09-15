@@ -22,17 +22,15 @@ const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const mutation = useMutationHooks((data) => UserService.createUser(data));
-  const { data, isLoading, isSuccess, isError } = mutation;
+  const { data, isLoading, isSuccess } = mutation;
 
   useEffect(() => {
-    if (isSuccess) {
-      message.success();
+    if (isSuccess && data.status === "OK") {
+      message.success("Đăng kí thành công...");
       navigate("/sign-in");
-    } else if (isError) {
-      message.error();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSuccess, isError]);
+  }, [isSuccess]);
 
   const handleOnChangeEmail = (e) => {
     const emailed = e.target.value;
@@ -59,7 +57,7 @@ const SignUpPage = () => {
     <div className="wrapper-authenPage">
       <div className="box-auth">
         <form action="">
-          <h2>Register Account</h2>
+          <h2>Đăng ký tài khoản</h2>
           <div className="input-box">
             <span className="icon">
               <CiMail />
@@ -104,14 +102,14 @@ const SignUpPage = () => {
 
           <LoadingComponent isLoading={isLoading}>
             <div className="btn-submit" onClick={handleSignUp}>
-              Register
+              Đăng ký
             </div>
           </LoadingComponent>
           <div className="link">
-            <span>You have a account?</span>
-            <p onClick={() => navigate("/sign-in")}>Login Now</p>
+            <span>Bạn đã có tài khoản?</span>
+            <p onClick={() => navigate("/sign-in")}>Đăng nhập ngay</p>
           </div>
-          <h5 onClick={() => navigate("/")}>back home</h5>
+          <h5 onClick={() => navigate("/")}>trang chủ</h5>
         </form>
       </div>
     </div>

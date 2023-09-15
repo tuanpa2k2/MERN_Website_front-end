@@ -2,14 +2,15 @@
   width: 100%;
   height: 682px;
   padding: 0 120px;
-  box-shadow: 0 0 10px blue;
 
   .header-title {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 48px;
-    background-color: #d5d5d5;
+    background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
 
     svg {
       font-size: 30px;
@@ -218,15 +219,14 @@
           width: 100%;
           font-size: 1.7rem;
           font-weight: 600;
-          padding: 7px 5px;
-          color: white;
-          background-color: blue;
+          padding: 8px 5px;
+          color: blue;
+          background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
 
           &:hover {
             cursor: pointer;
             box-shadow: 0 0 5px blue;
-            background-color: red;
-            color: white;
+            color: red;
           }
         }
       }

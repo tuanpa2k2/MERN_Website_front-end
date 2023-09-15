@@ -78,7 +78,7 @@ const SignInPage = () => {
     <div className="wrapper-authenPage">
       <div className="box-auth">
         <form action="">
-          <h2>Login Account</h2>
+          <h2>Đăng nhập tài khoản</h2>
           <div className="input-box">
             <span className="icon">
               <CiMail />
@@ -107,20 +107,20 @@ const SignInPage = () => {
           <div className="remember-forgot">
             <label>
               <input type="checkbox" />
-              Remember me
+              Nhớ tôi
             </label>
-            <p>Forgot password?</p>
+            <p>Quên mật khẩu?</p>
           </div>
           <LoadingComponent isLoading={isLoading}>
             <div className="btn-submit" onClick={handleSignin}>
-              Login
+              Đăng nhập
             </div>
           </LoadingComponent>
           <div className="link">
-            <span>Don't you have an account?</span>
-            <p onClick={() => navigate("/sign-up")}>Register Now</p>
+            <span>Bạn chưa có tài khoản?</span>
+            <p onClick={() => navigate("/sign-up")}>Đăng ký ngay</p>
           </div>
-          <h5 onClick={() => navigate("/")}>Back Home</h5>
+          <h5 onClick={() => navigate("/")}>Trang Chủ</h5>
         </form>
       </div>
     </div>

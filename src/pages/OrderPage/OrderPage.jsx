@@ -201,7 +201,10 @@ const OrderPage = () => {
   };
 
   const handleAddtocart = () => {
-    if (!user?.name || !user?.phone || !user?.address || !user?.city) {
+    if (!user?.access_token && !user?.refreshToken) {
+      message.warning("Bạn cần phải đăng nhập để tiếp tục...");
+      navigate("/sign-in");
+    } else if (!user?.name || !user?.phone || !user?.address || !user?.city) {
       setIsModalOpen(true);
     } else {
       navigate("/payment");
@@ -374,17 +377,17 @@ const OrderPage = () => {
               <div className="details-infobuyer">
                 <div className="name">
                   <div className="name-label">Họ và tên:</div>
-                  <div className="name-info">{user?.name}</div>
+                  <div className="name-info">{user?.name ? user?.name : <p>Chưa cập nhập</p>}</div>
                 </div>
                 <div className="phone">
                   <div className="name-label">Số điện thoại:</div>
-                  <div className="name-info" style={{ fontWeight: "500" }}>
-                    {user?.phone}
-                  </div>
+                  <div className="name-info">{user?.phone ? user?.phone : <p>Chưa cập nhập</p>}</div>
                 </div>
                 <div className="address">
                   <div className="name-label">Địa chỉ nhận:</div>
-                  <div className="name-info">{`${user?.address} - ${user?.city}`}</div>
+                  <div className="name-info">
+                    {user?.address && user?.city ? `${user?.address} - ${user?.city}` : <p>Chưa cập nhập</p>}
+                  </div>
                 </div>
                 <div className="change-address" onClick={handleChangeAddress}>
                   Đổi địa chỉ

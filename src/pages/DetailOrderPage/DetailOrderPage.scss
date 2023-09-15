@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: flex-start;
     height: 48px;
-    background-color: #d5d5d5;
+    background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
     border-left: 1px solid blue;
     border-right: 1px solid blue;
 
@@ -256,8 +256,7 @@
             text-transform: capitalize;
             background-color: #efefef;
             font-weight: 500;
-            padding: 0 5px;
-            margin-bottom: 12px;
+            padding: 5px;
           }
 
           .quantity,
@@ -397,7 +396,7 @@
             padding: 0px 5px 5px 5px;
             bottom: 0;
             left: 0;
-            background-color: rgb(220, 220, 220);
+            background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
 
             .delivery,
             .total-price {

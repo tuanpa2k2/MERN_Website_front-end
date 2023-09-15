@@ -46,7 +46,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (isSuccess) {
       handleUpdateGetDetailsUser(user?.id, user?.access_token);
-      message.success("Cập nhập thành công!");
+      message.success("Cập nhập thông tin thành công!");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSuccess]);
@@ -69,7 +69,7 @@ const ProfilePage = () => {
   };
 
   const handleOnchangeCity = (e) => {
-    setAddress(e.target.value);
+    setCity(e.target.value);
   };
 
   const handleOnchangeAddress = (e) => {

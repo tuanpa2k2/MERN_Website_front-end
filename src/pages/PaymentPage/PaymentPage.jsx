@@ -251,7 +251,7 @@ const PaymentPage = () => {
               </div>
 
               <div className="info-product">
-                <div className="label-payment">Danh sách các sản phẩm</div>
+                <div className="label-payment">Các sản phẩm đã chọn</div>
                 <div className="details-infoproduct">
                   {order.orderItems.map((items) => {
                     return (
@@ -302,7 +302,9 @@ const PaymentPage = () => {
                   />
                 </div>
               ) : (
-                <button onClick={() => handleAddOrderPayment()}>Thanh Toán</button>
+                <div style={{ margin: "5px" }}>
+                  <button onClick={() => handleAddOrderPayment()}>Thanh Toán</button>
+                </div>
               )}
             </div>
           </div>

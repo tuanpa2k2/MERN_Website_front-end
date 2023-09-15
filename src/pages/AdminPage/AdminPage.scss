@@ -1,13 +1,13 @@
 .wrapper-adminPage {
   display: flex;
   margin: 0 30px;
-  box-shadow: 1px 0px 2px #ccc;
 
   .menu-adminPage {
     font-size: 1.6rem;
     border-left: 1px solid black;
     width: 256px;
     box-shadow: 1px 0px 2px #ccc;
+    background-image: linear-gradient(to right, #6cff8e, #e7f793, #ebff98);
 
     .ant-menu-item {
       svg {
