@@ -15,6 +15,7 @@ import slider5 from "../../assets/images/slider/slider5.jpg";
 import "./HomePage.scss";
 import { useSelector } from "react-redux";
 import { useDebounceHook } from "../../hooks/useDebounceHook";
+import FacebookMesComponent from "../../components/FacebookMesComp/FacebookMesComponent";
 
 const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search);
@@ -101,6 +102,8 @@ const HomePage = () => {
           )}
         </div>
       </LoadingComponent>
+
+      <FacebookMesComponent />
     </div>
   );
 };
