@@ -18,12 +18,17 @@ import slider4 from "../../assets/images/slider/slider4.jpg";
 import slider5 from "../../assets/images/slider/slider5.jpg";
 
 import "./HomePage.scss";
+import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search);
   const searchDebounce = useDebounceHook(searchProduct, 500);
   const [limitPage, setLimitPage] = useState(15);
   const [typeProduct, setTypeProduct] = useState([]);
+
+  const [isChat, setIsChat] = useState(true);
+  const location = useLocation();
+  const { pathname } = location;
 
   const fetchProductAll = async (context) => {
     const limit = context?.queryKey && context?.queryKey[1];
@@ -55,6 +60,13 @@ const HomePage = () => {
   useEffect(() => {
     fetchProductAllType();
   }, []);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setIsChat(false);
+    } else setIsChat(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isChat]);
 
   return (
     <div className="wrapper-containerHomePage">
@@ -105,7 +117,7 @@ const HomePage = () => {
         </div>
       </LoadingComponent>
 
-      <FacebookMesComponent />
+      {isChat && <FacebookMesComponent />}
     </div>
   );
 };
