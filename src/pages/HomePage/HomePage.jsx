@@ -62,9 +62,10 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
-    if (pathname !== "/") {
-      setIsChat(false);
-    } else setIsChat(true);
+    if (pathname === "/") {
+      setIsChat(true);
+    }
+    setIsChat(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isChat]);
 
@@ -117,7 +118,7 @@ const HomePage = () => {
         </div>
       </LoadingComponent>
 
-      {isChat && <FacebookMesComponent />}
+      {isChat === true && <FacebookMesComponent />}
     </div>
   );
 };
