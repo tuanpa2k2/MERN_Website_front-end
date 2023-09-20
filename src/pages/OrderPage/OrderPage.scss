@@ -380,14 +380,14 @@
       .title-order {
         padding: 5px 0;
         margin-top: 5px;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         text-align: center;
         text-transform: uppercase;
-        font-weight: 500;
-        background-color: blue;
+        font-weight: 600;
+        font-family: serif;
+        letter-spacing: 2px;
+        background-image: linear-gradient(90deg, #3f34ea, #f24059, #4f8cf6);
         color: white;
-        border-top: 1px solid blue;
-        border-bottom: 1px solid blue;
       }
 
       .label-order {

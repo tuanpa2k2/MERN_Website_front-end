@@ -254,7 +254,7 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 3;
             text-transform: capitalize;
-            background-color: #efefef;
+            background-image: linear-gradient(90deg, #c4c1f9, #f19c9c, #b6cef9);
             font-weight: 500;
             padding: 5px;
           }
@@ -311,7 +311,7 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 3;
             text-transform: capitalize;
-            background-color: #efefef;
+            background-image: linear-gradient(90deg, #c4c1f9, #f19c9c, #b6cef9);
             font-weight: 500;
             padding: 0 5px;
             margin-bottom: 12px;
@@ -347,7 +347,7 @@
           height: 35px;
           font-size: 1.9rem;
           font-weight: 500;
-          background-color: #e9e9e9;
+          background-image: linear-gradient(90deg, #b1f1ff, #e2ed71, #4ff68a);
           color: blue;
         }
 
@@ -396,7 +396,6 @@
             padding: 0px 5px 5px 5px;
             bottom: 0;
             left: 0;
-            background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
 
             .delivery,
             .total-price {

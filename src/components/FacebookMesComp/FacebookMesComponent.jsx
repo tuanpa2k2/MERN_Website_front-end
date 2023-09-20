@@ -1,4 +1,3 @@
-"use client";
 import { CustomChat, FacebookProvider } from "react-facebook";
 
 const FacebookMesComponent = () => {
