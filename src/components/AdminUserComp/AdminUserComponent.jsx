@@ -539,7 +539,7 @@ const AdminUserComponent = () => {
               />
             </Form.Item>
 
-            <Form.Item label="Hình ảnh sản phẩm" name="avatar">
+            <Form.Item label="Hình ảnh người dùng" name="avatar">
               <Upload onChange={handleOnchangeAvatarDetails} maxCount={1}>
                 <Button icon={<AiOutlineCloudUpload />}>Chọn file ảnh của bạn</Button>
               </Upload>

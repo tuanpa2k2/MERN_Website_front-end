@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./TypeProductComponent.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -14,6 +14,16 @@ const TypeProductComponent = ({ name }) => {
     );
   };
 
+  useEffect(() => {
+    const nameClickButton = document.querySelectorAll(".wrapper-typeProduct");
+
+    nameClickButton.forEach((element) => {
+      element.addEventListener("click", () => {
+        document.querySelector(".active-Name")?.classList.remove("active-Name");
+        element.classList.add("active-Name");
+      });
+    });
+  }, [name]);
   // lấy childen 'name' trong 'HomePage'
   return (
     <div className="wrapper-typeProduct" onClick={() => handleNavigateType(name)}>
