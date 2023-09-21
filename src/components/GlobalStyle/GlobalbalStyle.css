@@ -54,84 +54,84 @@ li {
 }
 
 /* --------------------------------- CSS modal file AdminComponent ----------------------------*/
-:where(.css-dev-only-do-not-override-txh9fw).ant-modal .ant-modal-content {
+:where(.css-18iikkb).ant-modal .ant-modal-content {
   margin: 0 -120px;
 }
-:where(.css-dev-only-do-not-override-txh9fw).ant-modal .ant-modal-header {
+:where(.css-18iikkb).ant-modal .ant-modal-header {
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
-:where(.css-dev-only-do-not-override-txh9fw).ant-modal .ant-modal-title {
+:where(.css-18iikkb).ant-modal .ant-modal-title {
   font-size: 2rem;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-modal .ant-modal-close {
+:where(.css-18iikkb).ant-modal .ant-modal-close {
   display: none;
   pointer-events: none;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-form-item .ant-form-item-label {
+:where(.css-18iikkb).ant-form-item .ant-form-item-label {
   text-align: center;
   font-weight: 600;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-form-item .ant-form-item-control-input-content {
+:where(.css-18iikkb).ant-form-item .ant-form-item-control-input-content {
   display: flex;
   justify-content: space-between;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-form-item .ant-form-item-control-input-content .image-modal {
+:where(.css-18iikkb).ant-form-item .ant-form-item-control-input-content .image-modal {
   max-width: 300px;
   max-height: 260px;
 }
-:where(.css-dev-only-do-not-override-txh9fw).ant-form-item .ant-form-item-control-input-content .image-modal img {
+:where(.css-18iikkb).ant-form-item .ant-form-item-control-input-content .image-modal img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-:where(.css-dev-only-do-not-override-txh9fw).ant-form-item .ant-form-item-control-input-content .image-drawer {
+:where(.css-18iikkb).ant-form-item .ant-form-item-control-input-content .image-drawer {
   max-width: 500px;
   max-height: 480px;
 }
-:where(.css-dev-only-do-not-override-txh9fw).ant-form-item .ant-form-item-control-input-content .image-drawer img {
+:where(.css-18iikkb).ant-form-item .ant-form-item-control-input-content .image-drawer img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-upload-wrapper .ant-upload-list .ant-upload-list-item-container {
+:where(.css-18iikkb).ant-upload-wrapper .ant-upload-list .ant-upload-list-item-container {
   display: none;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-modal .ant-modal-footer {
+:where(.css-18iikkb).ant-modal .ant-modal-footer {
   margin-top: -15px;
 }
 
 /* ----------- CSS Table admin ----------------- */
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper .ant-table-thead > tr > th,
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper .ant-table-thead > tr > td {
+:where(.css-18iikkb).ant-table-wrapper .ant-table-thead > tr > th,
+:where(.css-18iikkb).ant-table-wrapper .ant-table-thead > tr > td {
   text-align: center;
   background-color: #c1c1c1;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper table tr th.ant-table-selection-column,
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper table tr td.ant-table-selection-column {
+:where(.css-18iikkb).ant-table-wrapper table tr th.ant-table-selection-column,
+:where(.css-18iikkb).ant-table-wrapper table tr td.ant-table-selection-column {
   width: 40px;
   border-right: 1px solid black;
 }
 
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper .ant-table-tbody > tr > th,
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper .ant-table-tbody > tr > td {
+:where(.css-18iikkb).ant-table-wrapper .ant-table-tbody > tr > th,
+:where(.css-18iikkb).ant-table-wrapper .ant-table-tbody > tr > td {
   text-align: center;
 }
 
 /* css hover vào table admin colums[name]*/
-:where(.css-dev-only-do-not-override-txh9fw).ant-table-wrapper .ant-table-thead th.ant-table-column-has-sorters:hover {
+:where(.css-18iikkb).ant-table-wrapper .ant-table-thead th.ant-table-column-has-sorters:hover {
   background: #c1c1c1;
 }
 
 /* css đánh giá sao --------------------------------*/
-:where(.css-dev-only-do-not-override-txh9fw).ant-rate {
+:where(.css-18iikkb).ant-rate {
   font-size: 17px;
 }
 
