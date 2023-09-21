@@ -161,7 +161,7 @@ const ProductDetailComponent = ({ idProduct }) => {
                     <LiaShippingFastSolid />
                     địa chỉ của bạn:
                   </div>
-                  <span>{user?.address}</span>
+                  <span>{`${user.address} - ${user.city}`}</span>
                 </div>
               </div>
             </div>

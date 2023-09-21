@@ -18,17 +18,12 @@ import slider4 from "../../assets/images/slider/slider4.jpg";
 import slider5 from "../../assets/images/slider/slider5.jpg";
 
 import "./HomePage.scss";
-import { useLocation } from "react-router-dom";
 
 const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search);
   const searchDebounce = useDebounceHook(searchProduct, 500);
   const [limitPage, setLimitPage] = useState(15);
   const [typeProduct, setTypeProduct] = useState([]);
-
-  const [isChat, setIsChat] = useState(true);
-  const location = useLocation();
-  const { pathname } = location;
 
   const fetchProductAll = async (context) => {
     const limit = context?.queryKey && context?.queryKey[1];
@@ -61,26 +56,19 @@ const HomePage = () => {
     fetchProductAllType();
   }, []);
 
-  useEffect(() => {
-    if (pathname === "/") {
-      setIsChat(true);
-    }
-    setIsChat(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isChat]);
-
   return (
     <div className="wrapper-containerHomePage">
-      <div className="wrapper-typeProductComp">
-        {typeProduct.map((item) => {
-          return <TypeProductComponent key={item} name={item} />;
-        })}
-      </div>
       <div className="wrapper-sliderPage">
         <SliderComponent arrImages={[slider1, slider2, slider3, slider4, slider5]} />
       </div>
       <LoadingComponent isLoading={isLoadingProducts}>
         <div className="wrapper-homePage">
+          <div className="wrapper-typeProductComp">
+            {typeProduct.map((item) => {
+              return <TypeProductComponent key={item} name={item} />;
+            })}
+          </div>
+
           <div className="wrapper-cardPage">
             {products?.data?.length ? (
               products?.data?.map((prod) => {
@@ -118,7 +106,7 @@ const HomePage = () => {
         </div>
       </LoadingComponent>
 
-      {isChat === true && <FacebookMesComponent />}
+      <FacebookMesComponent />
     </div>
   );
 };

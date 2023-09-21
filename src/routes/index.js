@@ -12,6 +12,8 @@ import PaymentPage from "../pages/PaymentPage/PaymentPage";
 import OrderSuccessPage from "../pages/OrderSuccessPage/OrderSuccessPage";
 import MyOrderPage from "../pages/MyOrderPage/MyOrderPage";
 import DetailOrderPage from "../pages/DetailOrderPage/DetailOrderPage";
+import NewPage from "../pages/NewPage/NewPage";
+import ContactPage from "../pages/ContactPage/ContactPage";
 
 export const routes = [
   {
@@ -57,6 +59,16 @@ export const routes = [
   {
     path: "/productDetails/:id",
     page: ProductDetailPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/news",
+    page: NewPage,
+    isShowHeader: true,
+  },
+  {
+    path: "/contacts",
+    page: ContactPage,
     isShowHeader: true,
   },
   {

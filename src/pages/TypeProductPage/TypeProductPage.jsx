@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CardComponent from "../../components/CardComp/CardComponent";
-import { Pagination } from "antd";
 import * as ProductService from "../../services/ProductService";
 
 import "./TypeProductPage.scss";
@@ -85,9 +84,6 @@ const TypeProductPage = () => {
             ) : (
               <div className="loading-product">Đang tải dữ liệu...</div>
             )}
-          </div>
-          <div className="pagination">
-            <Pagination total={500} />
           </div>
         </div>
       </div>

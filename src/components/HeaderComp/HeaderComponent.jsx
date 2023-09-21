@@ -86,6 +86,12 @@ const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false }) => {
               </button>
             </div>
           )}
+
+          <div className="news">
+            <span onClick={() => navigate("/news")}>Tin tức</span>
+            <span onClick={() => navigate("/contacts")}>Liên hệ</span>
+          </div>
+
           <div className="right">
             {user?.access_token ? (
               <Tippy

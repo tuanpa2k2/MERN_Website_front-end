@@ -1,9 +1,9 @@
 .wrapper-containerTypeProPage {
-  padding: 0 120px;
   min-height: 684px;
   height: fit-content;
 
   .row-type {
+    padding: 0 120px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -15,16 +15,20 @@
 
   .row-content {
     position: relative; // có định các thẻ position nằm bên trong
-    background-color: var(--background-header-inner);
+    background-image: url("../../assets/images/bgr-image/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 100%;
     padding-top: 5px;
-    border: 1px solid var(--text-color);
     padding: 8px 0;
     min-height: 645px;
     height: fit-content;
 
     .card-Comp {
+      padding: 0 120px;
       display: flex;
+      justify-content: flex-start;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
@@ -38,20 +42,6 @@
         left: 50%;
         transform: translate(-50%, -75%);
       }
-    }
-
-    .pagination {
-      // đưa thẻ div 'pagination' xuống cuối cùng của thẻ div cha (phải phụ thuộc vào 'position: relative' ở thẻ cha)
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-
-      // css bình thường
-      height: 55px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #c3c3c3;
     }
   }
 }
