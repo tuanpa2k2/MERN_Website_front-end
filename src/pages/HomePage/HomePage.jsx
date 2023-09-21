@@ -61,14 +61,14 @@ const HomePage = () => {
       <div className="wrapper-sliderPage">
         <SliderComponent arrImages={[slider1, slider2, slider3, slider4, slider5]} />
       </div>
-      <LoadingComponent isLoading={isLoadingProducts}>
-        <div className="wrapper-homePage">
-          <div className="wrapper-typeProductComp">
-            {typeProduct.map((item) => {
-              return <TypeProductComponent key={item} name={item} />;
-            })}
-          </div>
+      <div className="wrapper-homePage">
+        <div className="wrapper-typeProductComp">
+          {typeProduct.map((item) => {
+            return <TypeProductComponent key={item} name={item} />;
+          })}
+        </div>
 
+        <LoadingComponent isLoading={isLoadingProducts}>
           <div className="wrapper-cardPage">
             {products?.data?.length ? (
               products?.data?.map((prod) => {
@@ -103,8 +103,8 @@ const HomePage = () => {
               <button>{isPreviousData ? "Đang xử lý..." : "Xem thêm"}</button>
             </div>
           )}
-        </div>
-      </LoadingComponent>
+        </LoadingComponent>
+      </div>
 
       <FacebookMesComponent />
     </div>

@@ -40,7 +40,7 @@ const AdminPage = () => {
 
   return (
     <>
-      <HeaderComponent isHidenSearch isHidenCart />
+      <HeaderComponent isHidenSearch isHidenCart isNews isMore />
       <div className="wrapper-adminPage">
         <Menu className="menu-adminPage" mode="inline" items={items} onClick={handleOnclick} />
         <div className="right-content">{renderPage(keySelected)}</div>

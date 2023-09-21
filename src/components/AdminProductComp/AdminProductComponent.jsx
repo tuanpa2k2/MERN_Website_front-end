@@ -753,7 +753,7 @@ const AdminProductComponent = () => {
         open={isModalOpenDelete}
         onOk={onDeleteProduct}
         onCancel={handleCancelDelete}
-        width={400}
+        width={500}
       >
         <LoadingComponent isLoading={isLoadingDeleted}>
           <div style={{ display: "grid", justifyItems: "center", paddingBottom: "20px" }}>

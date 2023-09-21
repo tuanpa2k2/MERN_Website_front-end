@@ -176,7 +176,7 @@ const AdminUserComponent = () => {
       dataIndex: "avatar",
       render: (img) => (
         <div className="data-image">
-          <img src={img} alt="" />
+          <img src={img} alt="img" />
         </div>
       ),
     },
@@ -189,7 +189,7 @@ const AdminUserComponent = () => {
   const dataTable =
     users?.data?.length &&
     users?.data?.map((user) => {
-      return { ...user, key: user._id, isAdmin: user.isAdmin ? "True" : "False" };
+      return { ...user, key: user._id, isAdmin: user.isAdmin ? "Admin" : "Người dùng" };
     });
 
   // -----------------------------------------------------------------------------------------------------------------------
@@ -480,7 +480,7 @@ const AdminUserComponent = () => {
         open={isModalOpenDelete}
         onOk={onDeleteUser}
         onCancel={handleCancelDelete}
-        width={400}
+        width={500}
       >
         <LoadingComponent isLoading={isLoadingDeleted}>
           <div style={{ display: "grid", justifyItems: "center", paddingBottom: "20px" }}>

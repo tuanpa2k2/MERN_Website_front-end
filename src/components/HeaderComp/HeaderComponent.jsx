@@ -13,7 +13,7 @@ import logo from "../../assets/images/bgr-image/logo.png";
 
 import "./HeaderComponent.scss";
 
-const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false }) => {
+const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false, isNews = false, isMore = false }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [scrolled, setScrolled] = useState(false); // scrolled add className 'sticky-header'
@@ -87,10 +87,12 @@ const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false }) => {
             </div>
           )}
 
-          <div className="news">
-            <span onClick={() => navigate("/news")}>Tin tức</span>
-            <span onClick={() => navigate("/contacts")}>Liên hệ</span>
-          </div>
+          {!isNews && (
+            <div className="news">
+              <span onClick={() => navigate("/news")}>Tin tức</span>
+              <span onClick={() => navigate("/contacts")}>Liên hệ</span>
+            </div>
+          )}
 
           <div className="right">
             {user?.access_token ? (
@@ -144,9 +146,11 @@ const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false }) => {
               </Tippy>
             )}
 
-            <span className="btn-more">
-              <CiMenuKebab />
-            </span>
+            {!isMore && (
+              <span className="btn-more">
+                <CiMenuKebab />
+              </span>
+            )}
           </div>
         </div>
       </header>
