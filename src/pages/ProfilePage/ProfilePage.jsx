@@ -119,7 +119,7 @@ const ProfilePage = () => {
               <input type="email" placeholder={email} onChange={handleOnchangeEmail} />
             </div>
             <div className="imput-form">
-              <div className="label">Số điện thoại</div>
+              <div className="label">Số điện thoại (+84)</div>
               <span className="icon">
                 <BsPhone />
               </span>

@@ -40,8 +40,8 @@ const MyOrderPage = () => {
             </div>
             <div className="details-product">
               <div className="name-product">{items?.name}</div>
-              <div className="quantity">Số lượng: x{items?.amount}</div>
               <div className="price">Giá bán: {convertPrice(items?.price)}</div>
+              <div className="quantity">Số lượng: x{items?.amount}</div>
             </div>
           </div>
         );
@@ -55,8 +55,8 @@ const MyOrderPage = () => {
             </div>
             <div className="details-product">
               <div className="name-product">{items?.name}</div>
-              <div className="quantity">Số lượng: x{items?.amount}</div>
               <div className="price">Giá bán: {convertPrice(items?.price)}</div>
+              <div className="quantity">Số lượng: x{items?.amount}</div>
             </div>
           </div>
         );

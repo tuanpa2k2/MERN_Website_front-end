@@ -164,7 +164,7 @@ const AdminUserComponent = () => {
       dataIndex: "isAdmin",
     },
     {
-      title: "Số điện thoại",
+      title: "Số điện thoại (+84)",
       dataIndex: "phone",
     },
     {

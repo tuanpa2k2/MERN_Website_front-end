@@ -32,8 +32,8 @@ const OrderSuccessPage = () => {
         <div className="card-product">
           <div className="text-title-product">
             <div className="all-details">
-              Tổng tiền tất cả sản phẩm <p>( phí giao hàng: {convertPrice(state.totalDilivery)} )</p>:
-              <span>{convertPrice(state?.totalPriceMemo)}</span>
+              Tổng tiền tất cả sản phẩm <p>( shipping: {convertPrice(state.totalDilivery)} )</p>:
+              <span>{convertPrice(state?.totalPrice)}</span>
             </div>
           </div>
           <div className="header-table">

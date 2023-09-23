@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { Radio } from "antd";
@@ -19,6 +19,8 @@ const PaymentPage = () => {
   const user = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const location = useLocation();
+  const { state } = location;
 
   const [payment, setPayment] = useState("later_money");
   const [delivery, setDelivery] = useState("fast");
@@ -72,8 +74,8 @@ const PaymentPage = () => {
           delivery,
           payment,
           orders: order?.orderItemsSelected,
-          totalDilivery: diliveryPriceMemo,
-          totalPriceMemo: totalPriceMemo,
+          totalDilivery: state.totalDelivery,
+          totalPrice: state.totalMoney,
         },
       });
     }
@@ -272,28 +274,28 @@ const PaymentPage = () => {
               <div className="details-prices">
                 <div className="row-1">
                   <div className="name-label">Tạm tính:</div>
-                  <div className="price-order">{convertPrice(priceMemo)}</div>
+                  <div className="price-order">{convertPrice(state.totalPrice)}</div>
                 </div>
                 <div className="row-2">
                   <div className="name-label">Giảm giá:</div>
                   <div className="price-order" style={{ color: "blue" }}>
-                    -{convertPrice(discountPriceMemo)}
+                    -{convertPrice(state.totalDiscount)}
                   </div>
                 </div>
                 <div className="row-4">
                   <div className="name-label">Phí giao hàng:</div>
-                  <div className="price-order">{convertPrice(diliveryPriceMemo)}</div>
+                  <div className="price-order">{convertPrice(state.totalDelivery)}</div>
                 </div>
                 <hr />
                 <div className="row-5">
                   <div className="name-label">Tổng tiền:</div>
-                  <div className="total-price">{convertPrice(totalPriceMemo)}</div>
+                  <div className="total-price">{convertPrice(state.totalMoney)}</div>
                 </div>
               </div>
               {payment === "paypal" && sdkReady ? (
                 <div style={{ margin: "5px" }}>
                   <PayPalButton
-                    amount={Math.round(totalPriceMemo / 30000)}
+                    amount={Math.round(state.totalMoney / 30000)}
                     // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                     onSuccess={onSuccessPaypal}
                     onError={() => {

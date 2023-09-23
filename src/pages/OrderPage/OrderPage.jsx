@@ -207,7 +207,14 @@ const OrderPage = () => {
     } else if (!user?.name || !user?.phone || !user?.address || !user?.city) {
       setIsModalOpen(true);
     } else {
-      navigate("/payment");
+      navigate("/payment", {
+        state: {
+          totalPrice: priceMemo,
+          totalDiscount: discountPriceMemo,
+          totalDelivery: diliveryPriceMemo,
+          totalMoney: totalPriceMemo,
+        },
+      });
     }
   };
 

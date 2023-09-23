@@ -41,7 +41,7 @@ const DetailOrderPage = () => {
   }, [data]);
 
   const diliveryPriceMemo = useMemo(() => {
-    if (priceMemo === 0 && priceMemo >= 1000000) {
+    if (priceMemo === 0 || priceMemo >= 1000000) {
       return 0;
     } else if (500000 <= priceMemo) {
       return 10000;

@@ -109,10 +109,10 @@ const HeaderComponent = ({ isHidenSearch = false, isHidenCart = false, isNews = 
                   </div>
                 )}
               >
-                <p className="name-account">
+                <div className="name-account">
                   {userAvatar ? <img src={userAvatar} alt="userAvatar" /> : <VscAccount />}
-                  {user?.name.length ? user?.name : user?.email}
-                </p>
+                  <p>{user?.name.length ? user?.name : user?.email}</p>
+                </div>
               </Tippy>
             ) : (
               <Tippy
