@@ -24,8 +24,11 @@ const ProfilePage = () => {
 
   const mutation = useMutationHooks((data) => {
     const { id, access_token, ...rests } = data;
-    UserService.updateUser(id, access_token, rests);
+    const res = UserService.updateUser(id, access_token, rests);
+
+    return res;
   });
+
   const { isLoading, isSuccess } = mutation;
 
   useEffect(() => {
@@ -82,7 +85,16 @@ const ProfilePage = () => {
   };
 
   const handleUpdateUser = () => {
-    mutation.mutate({ id: user?.id, name, email, phone, address, city, avatar, access_token: user?.access_token });
+    mutation.mutate({
+      id: user?.id,
+      name,
+      email,
+      phone,
+      address,
+      city,
+      avatar,
+      access_token: user?.access_token,
+    });
   };
 
   return (
