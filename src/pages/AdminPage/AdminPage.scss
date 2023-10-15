@@ -18,4 +18,14 @@
   .right-content {
     flex: 1;
   }
+
+  .right-notKey {
+    flex: 1;
+    background: url("../../assets/images/product/dog-cute.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 64px);
+    position: relative;
+  }
 }

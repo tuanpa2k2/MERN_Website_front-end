@@ -2,15 +2,16 @@
   width: 100%;
   min-height: 682px;
   padding: 0 120px;
+  background-image: linear-gradient(90deg, #8afad1, #b7dcff, #fffa96);
 
   .header-title {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 48px;
-    background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
     border-left: 1px solid blue;
     border-right: 1px solid blue;
+    border-bottom: 1px solid blue;
 
     svg {
       font-size: 30px;
@@ -29,8 +30,7 @@
   }
 
   .details-myorder {
-    padding: 15px 10px;
-    border: 1px solid black;
+    padding: 15px 0;
     height: fit-content;
     min-height: 650px;
 

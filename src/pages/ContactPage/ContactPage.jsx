@@ -5,15 +5,10 @@ import { MdMarkEmailRead } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLocationDot } from "react-icons/fa6";
 
-import { Input } from "antd";
-
-import image from "../../assets/images/news/image-shirt.jpg";
-
+import image from "../../assets/images/news/slider4.jpg";
 import "./ContactPage.scss";
 
 const ContactPage = () => {
-  const { TextArea } = Input;
-
   return (
     <div className="wrapper-ContactPage">
       <div className="image-slide">
@@ -21,6 +16,33 @@ const ContactPage = () => {
         <img src={image} alt="amg" />
       </div>
       <div className="content-contact">
+        <div className="gui-thonhtin">
+          <h2>Gửi thông tin cho chúng tôi...</h2>
+          <p>
+            Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc lại với bạn sớm nhất có
+            thể.
+          </p>
+          <div className="input-change">
+            <label>Họ và tên</label>
+            <input placeholder="Nhập họ và tên..." />
+          </div>
+          <div className="input-change">
+            <label>Email</label>
+            <input placeholder="Nhập địa chỉ email..." />
+          </div>
+          <div className="input-change">
+            <label>Số điện thoại</label>
+            <input placeholder="Nhập số điện thoại..." />
+          </div>
+          <div className="input-change">
+            <label>Nội dung</label>
+            <textarea placeholder="Nhập nội dung..." />
+          </div>
+          <div className="btn-button">
+            <button>Gửi phản hồi</button>
+          </div>
+        </div>
+
         <div className="diachi">
           <div className="address">
             <div className="children">
@@ -69,35 +91,6 @@ const ContactPage = () => {
               height="100%"
             ></iframe>
           </div>
-        </div>
-        <div className="gui-thonhtin">
-          <h2>Gửi thông tin cho chúng tôi...</h2>
-          <p>
-            Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc lại với bạn sớm nhất có
-            thể.
-          </p>
-          <div className="input-change">
-            <label>Họ và tên</label>
-            <Input placeholder="Nhập họ và tên..." />
-          </div>
-          <div className="input-change">
-            <label>Email</label>
-            <Input placeholder="Nhập địa chỉ email..." />
-          </div>
-          <div className="input-change">
-            <label>Số điện thoại</label>
-            <Input placeholder="Nhập số điện thoại..." />
-          </div>
-          <div className="input-change">
-            <label>Nội dung</label>
-            <TextArea
-              showCount
-              maxLength={100}
-              style={{ height: 120, marginBottom: 24 }}
-              placeholder="Nhập nội dung..."
-            />
-          </div>
-          <button>Gửi phản hồi</button>
         </div>
       </div>
     </div>

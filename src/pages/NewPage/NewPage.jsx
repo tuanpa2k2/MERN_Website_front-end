@@ -1,6 +1,6 @@
 import React from "react";
 
-import banner from "../../assets/images/news/image-shirt.jpg";
+import banner from "../../assets/images/news/banner5.jpg";
 import img1 from "../../assets/images/news/fancy-festival-t-shirt-026.jpg";
 import img2 from "../../assets/images/news/balo2.jpg";
 import img3 from "../../assets/images/news/mu1.jpg";

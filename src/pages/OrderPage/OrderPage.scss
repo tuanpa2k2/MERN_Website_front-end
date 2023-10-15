@@ -1,14 +1,16 @@
 .wrapper-containerOrderPage {
   width: 100%;
   height: 682px;
-  padding: 0 120px;
+  padding: 5px 120px;
+  background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
 
   .header-title {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 48px;
     background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
+    border: 1px solid darkgray;
+    margin-bottom: 5px;
 
     svg {
       font-size: 30px;
@@ -40,7 +42,8 @@
 
     .left {
       width: 75%;
-      border: 1px solid black;
+      border: 1px solid darkgray;
+      margin-right: 5px;
 
       .steps {
         border-radius: 5px;
@@ -302,6 +305,7 @@
                   width: 25px;
                   font-size: 1.5rem;
                   text-align: center;
+                  background-color: transparent;
                 }
               }
             }
@@ -350,21 +354,6 @@
               font-size: 120px;
               color: red;
             }
-
-            button {
-              margin-top: 20px;
-              padding: 5px 30px;
-              border: 1px solid blue;
-              border-radius: 8px;
-              color: blue;
-              font-size: 1.6rem;
-
-              &:hover {
-                cursor: pointer;
-                color: red;
-                box-shadow: 0 0 15px blue;
-              }
-            }
           }
         }
       }
@@ -372,10 +361,8 @@
 
     .right {
       position: relative;
-      flex: 1;
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
-      border-top: 1px solid black;
+      width: 25%;
+      background-color: white;
 
       .title-order {
         padding: 5px 0;

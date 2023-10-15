@@ -117,6 +117,7 @@ const OrderPage = () => {
     if (isSuccessUpdated && dataUpdated?.status === "OK") {
       message.success("Cập nhập nguời dùng thành công");
       handleCancel();
+      window.location.reload();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSuccessUpdated]);
@@ -237,18 +238,11 @@ const OrderPage = () => {
     const { name, phone, address, city } = stateUserDetail;
 
     if (name && phone && address && city) {
-      mutationUpdate.mutate(
-        {
-          id: user?.id,
-          token: user?.access_token,
-          ...stateUserDetail,
-        },
-        {
-          onSuccess: () => {
-            setIsModalOpen(false);
-          },
-        }
-      );
+      mutationUpdate.mutate({
+        id: user?.id,
+        token: user?.access_token,
+        ...stateUserDetail,
+      });
     }
   };
 
@@ -369,7 +363,6 @@ const OrderPage = () => {
                 <div className="card-empty">
                   <span>Giỏ hàng của bạn chưa có sản phẩm nào...</span>
                   <BsCartX />
-                  <button onClick={() => navigate("/")}>Về Trang Chủ</button>
                 </div>
               )}
             </div>

@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("../../assets/images/product/authen.jpg");
+  background: url("../../assets/images/bgr-image/img-logic.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   .box-auth {
     display: flex;
@@ -17,7 +18,7 @@
     border: 2px solid rgb(255, 0, 0);
     border-radius: 20px;
     padding: 20px 0;
-    color: black;
+    color: white;
 
     h2 {
       text-align: center;
@@ -42,7 +43,7 @@
       position: relative;
       width: 340px;
       margin: 25px 0;
-      border-bottom: 1px solid #000000;
+      border-bottom: 1px solid #ffff;
 
       label {
         position: absolute;
@@ -56,6 +57,7 @@
         height: 60px;
         background: transparent;
         margin: 0px -35px -20px 0px;
+        color: white;
       }
 
       .icon {

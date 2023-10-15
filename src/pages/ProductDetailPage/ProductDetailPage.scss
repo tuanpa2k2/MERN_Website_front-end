@@ -1,6 +1,7 @@
 .wrapper-proDetailPage {
   width: 100%;
   padding: 0 120px;
+  background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
 
   .breadcrumb ul {
     display: flex;
@@ -9,8 +10,8 @@
     height: 36px;
     background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
     padding-left: 10px;
-    border-left: 1px solid blue;
-    border-right: 1px solid blue;
+    border: 1px solid darkgray;
+    margin-bottom: 5px;
 
     li {
       display: flex;
