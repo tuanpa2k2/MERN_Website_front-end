@@ -68,17 +68,17 @@
 
     .card-product {
       .text-title-product {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         font-size: 1.7rem;
         font-weight: 500;
         padding: 8px 10px;
+        background-image: linear-gradient(90deg, #d0ffb1, #e2ed71, #4ff6b9);
+        border: 1px solid;
         color: blue;
 
         .all-details {
           display: flex;
           align-items: center;
+          justify-content: flex-end;
           color: black;
 
           p {
@@ -88,9 +88,10 @@
           }
 
           span {
-            font-size: 1.9rem;
+            font-size: 2rem;
             color: red;
             margin-left: 8px;
+            margin-bottom: 3px;
           }
         }
       }

@@ -54,6 +54,10 @@ li {
 }
 
 /* --------------------------------- CSS modal file AdminComponent ----------------------------*/
+:where(.css-18iikkb).ant-drawer .ant-drawer-title {
+  font-size: 20px;
+}
+
 :where(.css-18iikkb).ant-modal .ant-modal-content {
   margin: 0 -120px;
 }
