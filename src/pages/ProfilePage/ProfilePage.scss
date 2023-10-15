@@ -92,27 +92,27 @@
             border: 1px solid blue;
           }
         }
+      }
 
-        .btn-updateInfo {
-          display: flex;
-          justify-content: flex-end;
-          margin-right: 10px;
+      .btn-updateInfo {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10px;
 
-          button {
-            padding: 8px 0;
-            width: 50%;
-            background-color: white;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 1.7rem;
-            border: 1px solid blue;
-            color: blue;
+        button {
+          padding: 8px 0;
+          width: 50%;
+          background-color: white;
+          border-radius: 5px;
+          font-weight: 600;
+          font-size: 1.7rem;
+          border: 1px solid blue;
+          color: blue;
 
-            &:hover {
-              color: red;
-              cursor: pointer;
-              border-color: red;
-            }
+          &:hover {
+            color: red;
+            cursor: pointer;
+            border-color: red;
           }
         }
       }

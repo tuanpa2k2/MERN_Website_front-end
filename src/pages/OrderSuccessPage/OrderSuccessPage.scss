@@ -3,6 +3,7 @@
   min-height: 682px;
   height: fit-content;
   padding: 0 120px;
+  box-shadow: 0 0 10px blue;
   background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
 
   .header-text {
@@ -22,8 +23,6 @@
   }
 
   .content-OrderSuccess {
-    background-color: #eaeaea;
-    padding: 5px 8px;
     font-size: 1.6rem;
 
     .shipping {
@@ -38,7 +37,7 @@
 
         .title-k {
           margin: 5px 0;
-          background-image: linear-gradient(to right, #ffb1b1, #e2ed71, #6ffdba);
+          background-image: linear-gradient(to right, #b1f1ff, #e2ed71, #4ff68a);
           padding: 5px 25px 5px 5px;
         }
       }
@@ -87,10 +86,9 @@
           }
 
           span {
-            font-size: 2rem;
+            font-size: 1.9rem;
             color: red;
             margin-left: 8px;
-            margin-bottom: 3px;
           }
         }
       }
